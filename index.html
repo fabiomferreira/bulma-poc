@@ -2,12 +2,32 @@
 <html>
 	<head>
 		<title>TODO Bulma</title>
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
 	</head>
 	<body>
 		<section class="section">
             <div class="container">
                 <h1 class="title">Todo Bulma</h1>
+                <div class="field is-grouped">
+                    <p class="control is-expanded">
+                        <input id="input-task" class="input" type="text" placeholder="Write a task">
+                    </p>
+                    <p class="control">
+                        <button id="add-button" class="button is-info" onclick="addTask()">Add</button>
+                    </p>
+                </div>
+                <section id="task-list" class="control">
+                </section>
+                <label class="checkbox">
+                      <input class="checkbox-task" type="checkbox" name="task">
+                      <span> Tal coisa </span>
+                </label>
+                <label class="checkbox">
+                      <input class="checkbox-task" type="checkbox" name="task">
+                      <span> Tal coisa </span>
+                </label>
             </div>
 		</section>
 	</body>
