@@ -1,8 +1,13 @@
-function addTask() {
-    var inputTask = document.getElementById('input-task');
-    var taskList = document.getElementById('task-list');
+var inputTask = document.getElementById('input-task');
+var taskList = document.getElementById('task-list');
+document.querySelector('#new-task').addEventListener('submit', addTask);
+
+function addTask(event) {
     var newTask = createTaskCheckbox(inputTask.value);
     taskList.innerHTML += newTask;
+    inputTask.value = '';
+
+    event.preventDefault();
 }
 
 function createTaskCheckbox(label) {

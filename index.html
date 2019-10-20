@@ -4,29 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>TODO Bulma</title>
-        <script type="text/javascript" src="index.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	</head>
 	<body>
 		<section class="section">
             <div class="container">
                 <h1 class="title">Todo Bulma</h1>
-                <div class="field is-grouped">
-                    <p class="control is-expanded">
-                        <input id="input-task" class="input" type="text" placeholder="Write a task">
-                    </p>
-                    <p class="control">
-                        <button id="add-button" class="button is-info" onclick="addTask()">Add</button>
-                    </p>
-                </div>
-                <div id="task-list" class="field">
-                    <label class="checkbox">
-                          <input type="checkbox">
-                          <span>  Remember me </span>
-                    </label>
+                <form id="new-task">
+                    <div class="field is-grouped">
+                        <p class="control is-expanded">
+                            <input id="input-task" class="input" type="text" placeholder="Write a task">
+                        </p>
+                        <p class="control">
+                            <button id="add-button" class="button is-info">Add</button>
+                        </p>
+                    </div>
+                </form>
+                <div id="tasks">
                 </div>
             </div>
 		</section>
+
+        <script src="app/helpers/DateConverter.js"></script>
+        <script src="app/domain/task/Task.js"></script>
+        <script src="app/domain/task/Tasks.js"></script>
+        <script src="app/controllers/TaskController.js"></script>
+        <script src="app/ui/views/TasksView.js"></script>
+        <script src="app/app.js"></script>
 	</body>
 </html>
