@@ -22,6 +22,13 @@ class TaskController {
         this._tasksView.update(this._tasks);
     }
 
+    removeAll() {
+        this._tasks.toEmpty();
+        this._tasksView.update(this._tasks);
+        this._message.text = 'Tasks removed successfully';
+        this._messageView.update(this._message);
+    }
+
     static check(event) {
         console.log(event);
     }
