@@ -1,11 +1,4 @@
-class TasksView {
-    constructor (selector) {
-        this._element = document.querySelector(selector);
-    }
-
-    update(model) {
-        this._element.innerHTML = this.template(model);
-    }
+class TasksView extends View {
 
     template(model) {
         return `
@@ -14,7 +7,7 @@ class TasksView {
                 `
                 <p class="control">
                     <label class="checkbox">
-                        <input type="checkbox" onchange="onTaskCheckboxChange(this)"/>
+                        <input class="task-checkbox" type="checkbox" onchange="TaskController.check(event)"/>
                         ${task.description}
                     </label>
                 </p>

@@ -1,3 +1,7 @@
+.task-checkbox {
+    height: 20px;
+    width: 20px;
+}
 .task-done {
     text-decoration: line-through;
 }

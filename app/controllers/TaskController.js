@@ -1,7 +1,7 @@
 class TaskController {
 
     constructor() {
-        let $ = document.querySelector.bind(document);
+        const $ = document.querySelector.bind(document);
         this._inputTask = $('#input-task');
         this._tasks = new Tasks();
         this._tasksView = new TasksView('#tasks');
@@ -20,6 +20,10 @@ class TaskController {
         this._messageView.update(this._message);
         this.clearForm();
         this._tasksView.update(this._tasks);
+    }
+
+    static check(event) {
+        console.log(event);
     }
 
     clearForm() {

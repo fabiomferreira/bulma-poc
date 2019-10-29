@@ -11,4 +11,8 @@ class Tasks {
     toArray() {
         return [].concat(this._tasks);
     }
+
+    toEmpty() {
+        this._tasks = [];
+    }
 }

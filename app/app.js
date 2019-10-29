@@ -1,4 +1,4 @@
-let taskController = new TaskController();
+const taskController = new TaskController();
 
 document
     .querySelector('#new-task')

@@ -16,7 +16,7 @@
                 <form id="new-task" class="content">
                     <div class="field is-grouped">
                         <p class="control is-expanded">
-                            <input id="input-task" class="input" type="text" placeholder="Write a task">
+                            <input id="input-task" class="input" autocomplete="off" type="text" placeholder="Write a task">
                         </p>
                         <p class="control">
                             <button id="add-button" class="button is-info">Add</button>
@@ -31,6 +31,7 @@
         <script src="app/domain/task/Task.js"></script>
         <script src="app/domain/task/Tasks.js"></script>
         <script src="app/controllers/TaskController.js"></script>
+        <script src="app/ui/views/View.js"></script>
         <script src="app/ui/views/TasksView.js"></script>
         <script src="app/ui/models/Message.js"></script>
         <script src="app/ui/views/MessageView.js"></script>
